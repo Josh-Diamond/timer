@@ -24,8 +24,8 @@ export default class Timer extends Component {
                     if(this.state.seconds === 59) {
                         this.setState(prevState => ({ minutes: prevState.minutes + 1, seconds: -1}))
                     }
-                    if(this.state.minutes === 60) {
-                        this.setState(prevState => ({ hours: prevState.hours + 1, minutes: 0}))
+                    if(this.state.minutes === 59) {
+                        this.setState(prevState => ({ hours: prevState.hours + 1, minutes: -1}))
                     }
                     this.setState(prevState => ({ seconds: prevState.seconds + 1}))
                 }
